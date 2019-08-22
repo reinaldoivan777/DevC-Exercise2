@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Kalkulator Sederhana Banget</h1>
-    <!-- <div class="container kalkulator">
+    <h1>KALKULATOR SEDERHANA BANGET</h1>
+    <div class="container kalkulator">
         <div class="my-3">
             <input type="text" class='form-control mb-3' readonly name="result" id="result">
             <div class="row mb-3">
@@ -70,8 +70,8 @@
                 </div>
             </div>
         </div>                
-    </div> -->
-    <div class="container">
+    </div>
+    <!-- <div class="container">
         <input type="number" class='form-control mb-3' name="angka1" id="angka1">
         <select class="form-control mb-3" name="operator" id="operator">
             <option value="+">+</option>
@@ -82,29 +82,29 @@
         <input type="number" class='form-control mb-3' name="angka2" id="angka2">
         <button onclick="hitung()" class="btn btn-primary keys mb-3">=</button>
         <input type="text" id="hasil" class="form-control" value="0">
-    </div>
+    </div> -->
     <script>
-        // function inputAngka(angka) {
-        //     document.getElementById('result').value += angka
-        // }
-        // function clearAll() {
-        //     document.getElementById('result').value = ''
-        // }
-        function hitung() {
-            var angkaSatu = parseInt(document.getElementById('angka1').value)
-            var angkaDua = parseInt(document.getElementById('angka2').value)
-            var operator = document.getElementById('operator').value
-            var total;
-            console.log(operator)
-
-            if (isNaN(angkaSatu) || isNaN(angkaDua)) alert('isi dengan yang benar ya')
-            else if (operator === '+') total = angkaSatu + angkaDua
-            else if (operator === '-') total = angkaSatu - angkaDua
-            else if (operator === 'x') total = angkaSatu * angkaDua
-            else if (operator === '/') total = angkaSatu / angkaDua
-
-            document.getElementById('hasil').value = total
+        function inputAngka(angka) {
+            document.getElementById('result').value += angka
         }
+        function clearAll() {
+            document.getElementById('result').value = ''
+        }
+        // function hitung() {
+        //     var angkaSatu = parseInt(document.getElementById('angka1').value)
+        //     var angkaDua = parseInt(document.getElementById('angka2').value)
+        //     var operator = document.getElementById('operator').value
+        //     var total;
+        //     console.log(operator)
+
+        //     if (isNaN(angkaSatu) || isNaN(angkaDua)) alert('isi dengan yang benar ya')
+        //     else if (operator === '+') total = angkaSatu + angkaDua
+        //     else if (operator === '-') total = angkaSatu - angkaDua
+        //     else if (operator === 'x') total = angkaSatu * angkaDua
+        //     else if (operator === '/') total = angkaSatu / angkaDua
+
+        //     document.getElementById('hasil').value = total
+        // }
     </script>
 </body>
 </html>
