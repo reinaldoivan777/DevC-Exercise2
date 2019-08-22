@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Exercise 2</title>
+    <title>Calculator Sederhana</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <center>
-        <h1>Kalkulator</h1>
-    </center>
+    <h1>Kalkulator Sederhana Banget</h1>
+    <!-- <div class="container kalkulator">
+        <div class="my-3">
+            <input type="text" class='form-control mb-3' readonly name="result" id="result">
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(1)" class="btn btn-secondary keys">1</button>
+                </div>
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(2)" class="btn btn-secondary keys">2</button>
+                </div>
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(3)" class="btn btn-secondary keys">3</button>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-danger keys">:</button>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(4)" class="btn btn-secondary keys">4</button>
+                </div>
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(5)" class="btn btn-secondary keys">5</button>
+                </div>
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(6)" class="btn btn-secondary keys">6</button>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-danger keys">x</button>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(7)" class="btn btn-secondary keys">7</button>
+                </div>
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(8)" class="btn btn-secondary keys">8</button>
+                </div>
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(9)" class="btn btn-secondary keys">9</button>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-danger keys">-</button>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="offset-sm-3 col-sm-3">
+                    <button onclick="inputAngka(0)" class="btn btn-secondary keys">0</button>
+                </div>
+                <div class="col-sm-3">
+                    <button onclick="clearAll()" class="btn btn-warning keys">AC</button>
+                </div>
+                <div class="col-sm-3">
+                    <button onclick="inputAngka(0)" class="btn btn-danger keys">+</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button class="btn btn-primary keys">=</button>
+                </div>
+            </div>
+        </div>                
+    </div> -->
+    <div class="container">
+        <input type="number" class='form-control mb-3' name="angka1" id="angka1">
+        <select class="form-control mb-3" name="operator" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" class='form-control mb-3' name="angka2" id="angka2">
+        <button onclick="hitung()" class="btn btn-primary keys mb-3">=</button>
+        <input type="text" id="hasil" class="form-control" value="0">
+    </div>
+    <script>
+        // function inputAngka(angka) {
+        //     document.getElementById('result').value += angka
+        // }
+        // function clearAll() {
+        //     document.getElementById('result').value = ''
+        // }
+        function hitung() {
+            var angkaSatu = parseInt(document.getElementById('angka1').value)
+            var angkaDua = parseInt(document.getElementById('angka2').value)
+            var operator = document.getElementById('operator').value
+            var total;
+            console.log(operator)
+
+            if (isNaN(angkaSatu) || isNaN(angkaDua)) alert('isi dengan yang benar ya')
+            else if (operator === '+') total = angkaSatu + angkaDua
+            else if (operator === '-') total = angkaSatu - angkaDua
+            else if (operator === 'x') total = angkaSatu * angkaDua
+            else if (operator === '/') total = angkaSatu / angkaDua
+
+            document.getElementById('hasil').value = total
+        }
+    </script>
 </body>
 </html>

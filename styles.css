@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.kalkulator {
+    margin-top: 50px;
+    width: 500px;
+    height: auto;
+    border: 1px solid red;
+}
+
+.keys {
+    width: 100%;
+}
+
+#result {
+    text-align: right;
+}
